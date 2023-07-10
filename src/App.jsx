@@ -1,10 +1,10 @@
-import PlayRandomMoveEngine from './components/chessboard';
-import './style/board.css';
+// import Main from './components/main';
+import ResponsiveAppBar from './components/NavBard'
 
 function App() {
   return (
     <div className="App">
-      <PlayRandomMoveEngine  />
+      <ResponsiveAppBar />
     </div>
   );
 }
