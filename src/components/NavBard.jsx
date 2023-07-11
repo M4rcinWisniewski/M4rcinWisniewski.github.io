@@ -15,11 +15,11 @@ import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 import GolfCourseSharpIcon from '@mui/icons-material/GolfCourseSharp';
 import Switch from '@mui/material/Switch';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
+// import FormGroup from '@mui/material/FormGroup';
+// import FormControlLabel from '@mui/material/FormControlLabel';
 
-const pages = ['Tournaments', 'Our Courses', 'Analysis Board', 'Blog'];
-const settings = [ 'Log in', 'Sign in'];
+const pages = ['Tournaments', 'Our Courses', 'Analysis Board', 'Blog', ];
+const settings = [ 'Log in', 'Sign in', <Switch></Switch>];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -94,7 +94,10 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                    {page}
+  
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -112,11 +115,11 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#f57c00',
               textDecoration: 'none',
             }}
           >
-            CHESSIFY
+            CHESSHUB
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -129,12 +132,11 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          <FormGroup>
-          <FormControlLabel control={<Switch color='secondary'/>} label="Theme" />
-          </ FormGroup >
+
           <Box sx={{ flexGrow: 0 }}>
 
             <Tooltip title="Open settings">
+              
             
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Martin Sharp" src="/static/images/avatar/1.jpg" />

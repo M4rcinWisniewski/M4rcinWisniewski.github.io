@@ -22,6 +22,7 @@ export default function ActionAreaCard(props) {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {props.level}
+            <br></br>
             {props.price}
           </Typography>
         </CardContent>
