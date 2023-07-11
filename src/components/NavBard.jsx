@@ -38,8 +38,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar sx={{bgcolor: "#5c0026"}}position="static">
-      <Container maxWidth="xl">
+    <AppBar sx={{bgcolor: "#5c0026", m: 0}}position="static">
+      <Container maxWidth="auto">
         <Toolbar disableGutters>
           <GolfCourseSharpIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
