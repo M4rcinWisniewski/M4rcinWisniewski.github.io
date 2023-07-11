@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { FaChessKnight } from 'react-icons/fa'
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -16,7 +16,7 @@ import MenuItem from '@mui/material/MenuItem';
 import GolfCourseSharpIcon from '@mui/icons-material/GolfCourseSharp';
 
 const pages = ['Tournaments', 'Our Courses', 'Analysis Board', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = [ 'Log in', 'Sign in'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -130,7 +130,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Martin Sharp" src="/static/images/avatar/1.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
