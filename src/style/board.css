@@ -1,3 +1,11 @@
 .iconLogo {
     padding-right: 10px;
 }
+
+.cards {
+    opacity: 70%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}

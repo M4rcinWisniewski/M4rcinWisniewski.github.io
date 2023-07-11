@@ -14,6 +14,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 import GolfCourseSharpIcon from '@mui/icons-material/GolfCourseSharp';
+import Switch from '@mui/material/Switch';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 const pages = ['Tournaments', 'Our Courses', 'Analysis Board', 'Blog'];
 const settings = [ 'Log in', 'Sign in'];
@@ -38,7 +41,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar sx={{bgcolor: "#5c0026", m: 0}}position="static">
+    <AppBar sx={{bgcolor: "#202020", m: 0}}position="static">
       <Container maxWidth="auto">
         <Toolbar disableGutters>
           <GolfCourseSharpIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -126,9 +129,13 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
+          <FormGroup>
+          <FormControlLabel control={<Switch color='secondary'/>} label="Theme" />
+          </ FormGroup >
           <Box sx={{ flexGrow: 0 }}>
+
             <Tooltip title="Open settings">
+            
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Martin Sharp" src="/static/images/avatar/1.jpg" />
               </IconButton>
