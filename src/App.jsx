@@ -4,6 +4,10 @@ import ActionAreaCard from './components/main'
 import data from './data/data'
 import Stack from '@mui/material/Stack';
 import Logo from './components/Logo';
+import React from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
+
 // import { shadows } from '@mui/system';
 function App() {
   const style = {
@@ -26,20 +30,26 @@ function App() {
       />
     )
   })
+  const autoplayOptions = {
+    delay: 1000,
+    jump: false,
+  }
+  const [emblaRef] = useEmblaCarousel({loop: false},  [Autoplay(autoplayOptions)])
+
   return (
     <div className="App">
       <ResponsiveAppBar />
       <Logo />
       <div style={style}>
-        <h2 style={{color: '#eeeeee', opacity: '100%'}}>
+        <h2 style={{color: '#eeeeee', opacity: '100%', fontSize: '2rem', textShadow: '2px 2px 3px #755991', marginTop: '4vh'}}>
           Most popular courses
         </h2>
-        <Stack direction="row"  FlexWrap="wrap"  sx={{
-
-  }} >
+        <div ref={emblaRef} style={{overflow: 'hidden', display: 'flex', justifyContent: 'center',  }}>
+          <Stack direction="row"  FlexWrap="wrap"  style={{ width: '50vw'}} >
           
             {cards}
-        </Stack>
+          </Stack>
+          </div>
       </div>
       
     </div>

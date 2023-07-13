@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-// import { Button } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import '../style/board.css'
 
 
@@ -13,10 +13,12 @@ export default function ActionAreaCard(props) {
     <Card className='card' sx={{
       transition: '.7s',
       m: 5,
+      marginBottom: '0',
       boxShadow: '0px 2px 35px -9px #555',
       "&:hover": {
       boxShadow: '0px 8px 35px 2px rgba(207, 159, 255, 1)'} ,
-      border: "1px solid ",}}>
+      border: "1px solid ",
+      borderRadius: '15px'}}>
       <CardActionArea  >
         <CardMedia
           component="img"
@@ -32,7 +34,7 @@ export default function ActionAreaCard(props) {
             {props.level}
             {props.price}
             <br></br>
-            <span style={{color: 'rgba(207, 159, 255, 1)', fontWeight: '600', fontSize: '1rem',}}>Read more</span>
+            <span style={{color: '#CF9FFF', fontWeight: '600', fontSize: '1rem', display: 'flex'}}>Read more< ArrowForwardIcon sx={{width: '1.2rem'}}/></span>
           </Typography>
         </CardContent>
       </CardActionArea>

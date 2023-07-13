@@ -1,26 +1,53 @@
-import image from '../static/logo.png'
+// import { Padding } from '@mui/icons-material';
+import image from '../static/purple.png'
 import '../style/board.css'
+import Button from '@mui/material/Button';
 
 const Logo = () => {
+    
     const Stylesh1 = {
         fontSize: '3.5rem',
         color: '#CF9FFF',
         textAlign: 'left',
         // fontFamily: 'Lilita One, cursive',
-        fontFamily: 'Inter, sans-serif'
+        fontFamily: 'Inter, sans-serif',
+        textShadow: '4px 4px 6px #755991',
+        
 
     }
-    const Stylesh3 = {
+    const Stylesh2 = {
         fontSize: '2rem',
         color: '#eeeeee',
         textAlign: 'left',
         margin: '-40px 10px 14vh 10px',
+        textShadow: '2px 2px 3px #755991',
+        marginBottom: '70px'
+        
     }
+    const styles3 = {
+        backgroundColor: '#CF9FFF',
+        color: 'black',
+        fontWeight: '550',
+        borderRadius: '20px',
+        width: '145px',
+        height: '42px'
+
+    }
+    const styles4 = {
+        color: '#ffffff',
+        fontWeight: '550',
+        borderRadius: '20px',
+        border: ' solid 1px #CF9FFF',
+        width: '145px',
+        height: '42px',
+    }
+    
     return (
         <div style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            
         }}>
         <section style={{
             width: '60vw',
@@ -28,15 +55,24 @@ const Logo = () => {
             display: 'flex',
             justifyContent: 'center',
             gap: '10vw',
-            flexWrap: 'wrap-reverse'
+            // flexWrap: 'wrap-reverse'
+
         }}><div>
             <h1 style={Stylesh1}>CHESSHUB</h1>
-            <h3 style={Stylesh3} className='h3-font'>Everything you need about chess</h3>
+            <h3 style={Stylesh2} className='h3-font'>Everything you need is chess...</h3>
+            <div style={{
+                display: 'flex',
+                justifyContent: 'left',
+                gap: '2vw',
+            }}>
+                <Button variant="contained" style={styles3}>Sing up!</Button>
+                <Button variant="outlined" style={styles4}>Our courses</Button>
             </div>
-            <img src={image} alt="" style={{
+            </div>
+            <img src={image} alt="" id="imageId"style={{
                 // width: '30%',
                 height: '100%',
-                minWidth: '250px',
+                minWidth: '10%',
             }} />
         </section>
         </div>
