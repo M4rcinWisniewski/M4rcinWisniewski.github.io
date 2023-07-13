@@ -41,7 +41,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar sx={{bgcolor: "#202020", m: 0}}position="static">
+    <AppBar sx={{bgcolor: "#080808", m: 0, borderBottom: 'solid #333 .5px'}}position="static">
       <Container maxWidth="auto">
         <Toolbar disableGutters>
           <GolfCourseSharpIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -56,7 +56,7 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 800,
               letterSpacing: '.35rem',
-              color: 'inherit',
+              color: '#CF9FFF',
               textDecoration: 'none',
             }}
           >
@@ -115,7 +115,7 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: '#f57c00',
+              color: '#CF9FFF',
               textDecoration: 'none',
             }}
           >

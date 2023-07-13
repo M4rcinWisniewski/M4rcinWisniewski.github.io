@@ -1,22 +1,45 @@
+import image from '../static/logo.png'
+import '../style/board.css'
 
 const Logo = () => {
     const Stylesh1 = {
-        fontSize: '4.5rem',
-        color: '#eeeeee',
-        textAlign: 'center'
+        fontSize: '3.5rem',
+        color: '#CF9FFF',
+        textAlign: 'left',
+        // fontFamily: 'Lilita One, cursive',
+        fontFamily: 'Inter, sans-serif'
+
     }
     const Stylesh3 = {
         fontSize: '2rem',
         color: '#eeeeee',
-        textAlign: 'center',
-        backgroundColor: '#262626',
-        margin: '-30px 10px 50px 10px',
+        textAlign: 'left',
+        margin: '-40px 10px 14vh 10px',
     }
     return (
-        <section>
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+        }}>
+        <section style={{
+            width: '60vw',
+            height: '40vh',
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '10vw',
+            flexWrap: 'wrap-reverse'
+        }}><div>
             <h1 style={Stylesh1}>CHESSHUB</h1>
-            <h3 style={Stylesh3}>Everything you need about chess</h3>
+            <h3 style={Stylesh3} className='h3-font'>Everything you need about chess</h3>
+            </div>
+            <img src={image} alt="" style={{
+                // width: '30%',
+                height: '100%',
+                minWidth: '250px',
+            }} />
         </section>
+        </div>
     )
 }
 

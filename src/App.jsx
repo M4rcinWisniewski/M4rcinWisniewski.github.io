@@ -4,7 +4,16 @@ import ActionAreaCard from './components/main'
 import data from './data/data'
 import Stack from '@mui/material/Stack';
 import Logo from './components/Logo';
+// import { shadows } from '@mui/system';
 function App() {
+  const style = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '100%',
+
+  }
+
   const cards = data.map(item =>{
     return (
       <ActionAreaCard 
@@ -21,7 +30,17 @@ function App() {
     <div className="App">
       <ResponsiveAppBar />
       <Logo />
-      <div className='cards'><Stack direction="row"  FlexWrap="wrap" >{cards}</Stack></div>
+      <div style={style}>
+        <h2 style={{color: '#eeeeee', opacity: '100%'}}>
+          Most popular courses
+        </h2>
+        <Stack direction="row"  FlexWrap="wrap"  sx={{
+
+  }} >
+          
+            {cards}
+        </Stack>
+      </div>
       
     </div>
   );
