@@ -26,21 +26,21 @@ const data = [
     {
         id: 4,
         name: 'Caro-kann defense',
-        level: 'intermidiate',
+        level: 'intermidiate ',
         image: image,
         price: '$20'
     },
     {
         id: 5,
         name: 'Tactics',
-        level: 'Beginner',
+        level: 'Beginner ',
         image: image3,
         price: '$10'
     },
     {
         id: 6,
-        name: 'Endgames',
-        level: 'Master',
+        name: 'Endgames Theory',
+        level: 'Master ',
         image: image2,
         price: '$30'
     },

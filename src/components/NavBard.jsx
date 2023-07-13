@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
-import GolfCourseSharpIcon from '@mui/icons-material/GolfCourseSharp';
+import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
 import Switch from '@mui/material/Switch';
 // import FormGroup from '@mui/material/FormGroup';
 // import FormControlLabel from '@mui/material/FormControlLabel';
@@ -44,7 +44,7 @@ function ResponsiveAppBar() {
     <AppBar sx={{bgcolor: "#080808", m: 0, borderBottom: 'solid #333 .5px'}}position="static">
       <Container maxWidth="auto">
         <Toolbar disableGutters>
-          <GolfCourseSharpIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <RocketLaunchOutlinedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -102,7 +102,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <GolfCourseSharpIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <RocketLaunchOutlinedIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap

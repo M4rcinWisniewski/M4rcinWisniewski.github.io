@@ -14,9 +14,6 @@ export default function ActionAreaCard(props) {
       transition: '.7s',
       m: 5,
       marginBottom: '0',
-      boxShadow: '0px 2px 35px -9px #555',
-      "&:hover": {
-      boxShadow: '0px 8px 35px 2px rgba(207, 159, 255, 1)'} ,
       border: "1px solid ",
       borderRadius: '15px'}}>
       <CardActionArea  >

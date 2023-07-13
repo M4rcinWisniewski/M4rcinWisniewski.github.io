@@ -31,8 +31,10 @@ function App() {
     )
   })
   const autoplayOptions = {
-    delay: 1000,
+    delay: 5000,
     jump: false,
+    align: 'center',
+    
   }
   const [emblaRef] = useEmblaCarousel({loop: false},  [Autoplay(autoplayOptions)])
 
@@ -45,7 +47,7 @@ function App() {
           Most popular courses
         </h2>
         <div ref={emblaRef} style={{overflow: 'hidden', display: 'flex', justifyContent: 'center',  }}>
-          <Stack direction="row"  FlexWrap="wrap"  style={{ width: '50vw'}} >
+          <Stack direction="row"  FlexWrap="wrap"  style={{ width: '50vw', margin: 0, display: 'flex', justifyContent: 'left',  flex: '0 0 50%'}} >
           
             {cards}
           </Stack>
