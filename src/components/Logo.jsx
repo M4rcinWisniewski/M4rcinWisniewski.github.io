@@ -28,17 +28,17 @@ const Logo = () => {
         backgroundColor: '#CF9FFF',
         color: 'black',
         fontWeight: '550',
-        borderRadius: '20px',
-        width: '145px',
+        borderRadius: '15px',
+        width: '120px',
         height: '42px'
 
     }
     const styles4 = {
         color: '#ffffff',
         fontWeight: '550',
-        borderRadius: '20px',
+        borderRadius: '15px',
         border: ' solid 1px #CF9FFF',
-        width: '145px',
+        width: '120px',
         height: '42px',
     }
     
@@ -58,15 +58,15 @@ const Logo = () => {
             // flexWrap: 'wrap-reverse'
 
         }}><div>
-            <h1 style={Stylesh1}>CHESSHUB</h1>
-            <h3 style={Stylesh2} className='h3-font'>Everything you need is chess...</h3>
+            <h1 style={Stylesh1}>ChessRocket</h1>
+            <h3 style={Stylesh2} className='h3-font'>Everything you need about chess...</h3>
             <div style={{
                 display: 'flex',
                 justifyContent: 'left',
                 gap: '2vw',
             }}>
                 <Button variant="contained" style={styles3}>Sing up!</Button>
-                <Button variant="outlined" style={styles4}>Our courses</Button>
+                <Button variant="outlined" style={styles4}>Courses</Button>
             </div>
             </div>
             <img src={image} alt="" id="imageId"style={{

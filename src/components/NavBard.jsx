@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,14 +11,16 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-// import AdbIcon from '@mui/icons-material/Adb';
+import { Link,  } from "wouter";
 import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
-import Switch from '@mui/material/Switch';
-// import FormGroup from '@mui/material/FormGroup';
-// import FormControlLabel from '@mui/material/FormControlLabel';
 
-const pages = ['Tournaments', 'Our Courses', 'Analysis Board', 'Blog', ];
-const settings = [ 'Log in', 'Sign in', <Switch></Switch>];
+const  linkStyle = {
+  color: '#ffffff', 
+  textDecoration: 'none'
+}
+
+const pages = [ <Link href="/" style={linkStyle}>Tournaments</Link>, <Link href="/Courses" style={linkStyle}>Our Courses</Link>, 'Analysis Board', 'Blog', ];
+const settings = [ 'Log in', 'Sign in'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -44,7 +45,7 @@ function ResponsiveAppBar() {
     <AppBar sx={{bgcolor: "#080808", m: 0, borderBottom: 'solid #333 .5px'}}position="static">
       <Container maxWidth="auto">
         <Toolbar disableGutters>
-          <RocketLaunchOutlinedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <RocketLaunchOutlinedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 , color: '#CF9FFF'}} />
           <Typography
             variant="h6"
             noWrap
@@ -56,11 +57,11 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 800,
               letterSpacing: '.35rem',
-              color: '#CF9FFF',
+              color: '#ffffff',
               textDecoration: 'none',
             }}
           >
-            CHESSHUB
+            ChessRocket
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -102,7 +103,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <RocketLaunchOutlinedIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <RocketLaunchOutlinedIcon sx={{ display: { xs: 'flex', md: 'none', color: '#CF9FFF' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -115,13 +116,13 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: '#CF9FFF',
+              color: '#ffffff',
               textDecoration: 'none',
             }}
           >
-            CHESSHUB
+            ChessRocket
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex',  } }}>
             {pages.map((page) => (
               <Button
                 key={page}
