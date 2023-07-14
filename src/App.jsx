@@ -47,7 +47,7 @@ function App() {
           Most popular courses
         </h2>
         <div ref={emblaRef} style={{overflow: 'hidden', display: 'flex', justifyContent: 'center',  }}>
-          <Stack direction="row"  FlexWrap="wrap"  style={{ width: '50vw', margin: 0, display: 'flex', justifyContent: 'left',  flex: '0 0 50%'}} >
+          <Stack direction="row"  FlexWrap="wrap"  style={{ width: '60vw', margin: 0, display: 'flex', justifyContent: 'left',  flex: '0 0 50%'}} >
           
             {cards}
           </Stack>
