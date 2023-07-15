@@ -19,8 +19,19 @@ const  linkStyle = {
   textDecoration: 'none'
 }
 
-const pages = [ <Link href="/" style={linkStyle}>Tournaments</Link>, <Link href="/Courses" style={linkStyle}>Our Courses</Link>, 'Analysis Board', 'Blog', ];
-const settings = [ 'Log in', 'Sign in'];
+const pages = [ 
+
+  <Link href="/Learn-to-play" style={linkStyle}>Learn to play</Link>, 
+  <Link href="/Courses" style={linkStyle}>Our Courses</Link>, 
+  <Link href="/Analysis" style={linkStyle}>Analysis Board</Link>, 
+  <Link href="/Blog" style={linkStyle}>Blog</Link>
+];
+
+
+const settings = [ 
+  <Link href='/Login' style={{textDecoration: 'none', color: '#181818'}}>Log in</Link>, 
+  <Link href='/Login' style={{textDecoration: 'none', color: '#181818'}}>Sign in</Link>
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -42,7 +53,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar sx={{bgcolor: "#080808", m: 0, borderBottom: 'solid #333 .5px'}}position="static">
+    <AppBar sx={{bgcolor: "#080808", m: 0, borderBottom: 'solid #333 .5px'}}position="fixed">
       <Container maxWidth="auto">
         <Toolbar disableGutters>
           <RocketLaunchOutlinedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 , color: '#CF9FFF'}} />
