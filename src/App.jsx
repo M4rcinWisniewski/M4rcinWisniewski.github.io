@@ -3,7 +3,7 @@ import React from 'react'
 import Home from './Routes/Home'
 import {Route} from "wouter";
 import Courses from './Routes/Courses';
-import LogInForm from './Routes/SignUp';
+import LogInForm from './Routes/LogIn';
 
 function App(){
   return(

@@ -14,7 +14,8 @@ const LogInForm = () => {
                 height: '100vh',
                 opacity: '99%',
                 width: '100vw',
-                background: '#080808'
+                background: '#080808',
+                
                
                 
                 }}>
@@ -25,7 +26,8 @@ const LogInForm = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 padding: '15px',
-                borderRadius: '20px'
+                borderRadius: '20px',
+                minWidth: '300px'
                 
                 
             }}>

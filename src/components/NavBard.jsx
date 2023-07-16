@@ -15,7 +15,7 @@ import { Link,  } from "wouter";
 import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
 
 const  linkStyle = {
-  color: '#ffffff', 
+  color: 'inherit', 
   textDecoration: 'none'
 }
 
@@ -29,8 +29,8 @@ const pages = [
 
 
 const settings = [ 
-  <Link href='/Login' style={{textDecoration: 'none', color: '#181818'}}>Log in</Link>, 
-  <Link href='/Login' style={{textDecoration: 'none', color: '#181818'}}>Sign in</Link>
+  <Link href='/Login' style={linkStyle}>Log in</Link>, 
+  <Link href='/Login' style={linkStyle}>Sign in</Link>
 ];
 
 function ResponsiveAppBar() {
