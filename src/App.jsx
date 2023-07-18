@@ -6,6 +6,7 @@ import Courses from './Routes/Courses';
 import LogInForm from './Routes/LogIn';
 import Signup from './Routes/SingIn';
 import LearnToPlay from './Routes/LearnToPlay';
+import './style/style.css'
 
 function App(){
   return(

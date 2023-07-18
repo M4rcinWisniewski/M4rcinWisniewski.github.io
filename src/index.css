@@ -7,6 +7,16 @@ body {
     background-color: #080808;
     overflow-x: hidden;
     /* color: #755991 */
+    
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CF9FFF;
 }
 
 
