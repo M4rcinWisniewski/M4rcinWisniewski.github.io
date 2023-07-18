@@ -21,8 +21,7 @@ const CardPieces = props => {
             
             
             '&:hover': {
-                width: '11.5vw',
-                height: '16.5vh',
+
                 filter: 'drop-shadow(0px 0px 30px #CF9FFF)',
                 textShadow: '0px 3px 6px #755991',
               }

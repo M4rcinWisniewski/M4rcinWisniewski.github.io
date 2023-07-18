@@ -16,7 +16,7 @@ const cards = piece.map(item =>{
 const Learn = () => {
 
     return (
-        <div style={{ }}>
+        <div>
             <ResponsiveAppBar/>
             <LogoLearn  />
             <h1 className="h1Learn"style={{color: '#eeefff',
@@ -29,7 +29,7 @@ const Learn = () => {
             <section style={{
                 display: 'flex', 
                 width: '100vw', 
-                height: '20vh', 
+                height: '50vh', 
                 justifyContent: 'center', 
                 // flexWrap: 'wrap',
                 alignContent: 'center',
