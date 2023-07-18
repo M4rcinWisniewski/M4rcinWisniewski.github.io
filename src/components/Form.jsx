@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { TextField, Typography, FormHelperText } from '@mui/material';
 import Button from '@mui/material/Button';
+import {Link} from 'wouter';
+import { linkStyle } from './NavBard'; // style for link imported from NavBar component
 
 import '../style/board.css';
 
@@ -29,8 +31,6 @@ const Form = () => {
 
     if (loginValue.trim().length > 0 && passwordValue.trim().length > 0) {
       // Proceed with form submission
-      console.log('Login:', loginValue);
-      console.log('Password:', passwordValue);
     }
   };
 
@@ -115,7 +115,7 @@ const Form = () => {
         color="secondary"
         sx={{ textTransform: 'lowercase ! important', cursor: 'pointer' }}
       >
-        * If you don't have an account, sign up!
+        <Link href="/Signup" style={linkStyle}>* If you don't have an account, sign up!</Link>
       </Typography>
     </form>
   );

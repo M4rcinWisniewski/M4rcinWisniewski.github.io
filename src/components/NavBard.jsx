@@ -14,14 +14,14 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link,  } from "wouter";
 import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
 
-const  linkStyle = {
+export const  linkStyle = {
   color: 'inherit', 
   textDecoration: 'none'
 }
 
 const pages = [ 
 
-  <Link href="/Learn-to-play" style={linkStyle}>Learn to play</Link>, 
+  <Link href="/Courses/Learn-To-Play" style={linkStyle}>Learn to play</Link>, 
   <Link href="/Courses" style={linkStyle}>Our Courses</Link>, 
   <Link href="/Analysis" style={linkStyle}>Analysis Board</Link>, 
   <Link href="/Blog" style={linkStyle}>Blog</Link>

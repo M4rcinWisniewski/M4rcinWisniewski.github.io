@@ -2,7 +2,7 @@
 import image from '../static/purple.png'
 import '../style/board.css'
 import Button from '@mui/material/Button';
-import { Link,  } from "wouter";
+import { Link } from "wouter";
 
 const Logo = () => {
     
@@ -62,7 +62,7 @@ const Logo = () => {
             // flexWrap: 'wrap-reverse'
 
         }}><div>
-            <h1 style={Stylesh1}>ChessRocket</h1>
+        <h1 style={Stylesh1}>ChessRocket</h1>
             <h3 style={Stylesh2} className='h3-font'>Everything you need about chess...</h3>
             <div style={{
                 display: 'flex',
@@ -70,7 +70,7 @@ const Logo = () => {
                 gap: '2vw',
             }}>
                 <Link href='/Login' style={{textDecoration: 'none', color: '#181818'}}><Button variant="contained" style={styles3}>Sing up!</Button></Link>
-                <Link href='/Login' style={{textDecoration: 'none', color: '#181818'}}><Button variant="outlined" style={styles4}>Courses</Button></Link>
+                <Link href='/Courses' style={{textDecoration: 'none', color: '#181818'}}><Button variant="outlined" style={styles4}>Courses</Button></Link>
             </div>
             </div>
             <img src={image} alt="" id="imageId"style={{
