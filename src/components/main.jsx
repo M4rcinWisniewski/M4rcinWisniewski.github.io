@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import '../style/board.css'
+import '../style/style.css'
 
 
 export default function ActionAreaCard(props) {

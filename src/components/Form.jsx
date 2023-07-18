@@ -3,8 +3,7 @@ import { TextField, Typography, FormHelperText } from '@mui/material';
 import Button from '@mui/material/Button';
 import {Link} from 'wouter';
 import { linkStyle } from './NavBard'; // style for link imported from NavBar component
-
-import '../style/board.css';
+import '../style/style.css';
 
 const Form = () => {
   const [loginValue, setLoginValue] = useState('');

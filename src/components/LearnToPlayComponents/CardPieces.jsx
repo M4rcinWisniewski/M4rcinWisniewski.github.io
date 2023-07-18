@@ -7,7 +7,7 @@ const CardPieces = props => {
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
-            flexDirection: 'column', 
+            flexDirection: 'column-reverse', 
             padding: '3.5vw',
             margin: '3vw',
             marginTop: '2vh',
@@ -18,6 +18,7 @@ const CardPieces = props => {
             // border: 'solid 1px #eeefff',
             transition: '.5s',
             cursor: 'pointer',
+            
             
             '&:hover': {
                 width: '11.5vw',

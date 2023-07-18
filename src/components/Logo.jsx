@@ -1,6 +1,6 @@
 // import { Padding } from '@mui/icons-material';
 import image from '../static/purple.png'
-import '../style/board.css'
+import '../style/style.css'
 import Button from '@mui/material/Button';
 import { Link } from "wouter";
 

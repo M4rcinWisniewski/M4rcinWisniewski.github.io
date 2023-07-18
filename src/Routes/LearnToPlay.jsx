@@ -1,7 +1,8 @@
 import ResponsiveAppBar from "../components/NavBard"
 import piece from '../data/dataPieces'
-import CardPieces from "../components/CardPieces"
-import '../style/board.css'
+import CardPieces from "../components/LearnToPlayComponents/CardPieces"
+import '../style/style.css'
+import LogoLearn from '../components/LearnToPlayComponents/LogoLearn'
 
 const cards = piece.map(item =>{
     return(
@@ -15,21 +16,30 @@ const cards = piece.map(item =>{
 const Learn = () => {
 
     return (
-        <>
+        <div style={{ }}>
             <ResponsiveAppBar/>
-            <h1 className="h1Learn"style={{color: '#eeefff', margin: '15vh', textAlign: 'center', textShadow: '4px 4px 6px #755991',}}>Learn how to move pieces</h1>
+            <LogoLearn  />
+            <h1 className="h1Learn"style={{color: '#eeefff',
+             margin: '15vh', 
+             textAlign: 'center', 
+             textShadow: '4px 4px 6px #755991', 
+             marginBottom: '0'}}>
+                Learn how to move pieces
+                </h1>
             <section style={{
                 display: 'flex', 
                 width: '100vw', 
-                height: '50vh', 
+                height: '20vh', 
                 justifyContent: 'center', 
                 // flexWrap: 'wrap',
-                alignContent: 'center'
+                alignContent: 'center',
+                marginTop: '0',
+                
                 }}>
                     
                     {cards}
                 </section>
-        </>
+        </div>
     )
 }
 
