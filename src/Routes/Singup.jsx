@@ -1,9 +1,7 @@
 import ResponsiveAppBar from '../components/NavBard'
-import Form from '../components/logInForm'
+import Form from '../components/SingupForm'
 
-
-
-const LogInForm = () => {
+const Signup = () => {
     return (
         <>
             <ResponsiveAppBar />
@@ -21,8 +19,8 @@ const LogInForm = () => {
                 }}>
             <div style={{
                 backgroundColor: '#eeefff',
-                width: '25vw',
-                height: '56vh',
+                width: '30vw',
+                height: '66vh',
                 display: 'flex',
                 justifyContent: 'center',
                 padding: '15px',
@@ -36,8 +34,8 @@ const LogInForm = () => {
             </form>
 
         </>
-
     )
 }
 
-export default LogInForm 
+export default Signup
+

@@ -4,7 +4,7 @@ import Home from './Routes/Home'
 import {Route} from "wouter";
 import Courses from './Routes/Courses';
 import LogInForm from './Routes/LogIn';
-import Signup from './Routes/SingIn';
+import Signup from './Routes/Singup';
 import LearnToPlay from './Routes/LearnToPlay';
 import './style/style.css'
 

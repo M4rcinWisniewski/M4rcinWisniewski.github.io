@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { Chessboard } from 'react-chessboard';
 import { elements } from '../FENdata';
-import { Button } from '@mui/material';
+import { Button, Typography, Box } from '@mui/material';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 const Intro = () => {
   const [randomPosition, setRandomPosition] = useState('');
@@ -20,7 +21,7 @@ const Intro = () => {
     pickRandomPosition();
 
     // Execute the function every 5 seconds
-    const intervalId = setInterval(pickRandomPosition, 3000);
+    const intervalId = setInterval(pickRandomPosition, 1500);
 
     // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
@@ -33,7 +34,7 @@ const Intro = () => {
         flexDirection: 'row-reverse',
         justifyContent: 'center',
         width: '100vw',
-        marginTop: '10vh',
+        marginTop: '6vh',
         height: '90vh',
         gap: '15vw',
       }}
@@ -49,21 +50,45 @@ const Intro = () => {
           marginTop: '12vh',
         }}
       >
-        Learn basic rules of chess!
+        First steps at chess!
       </h1>
+      <Typography sx={{
+        width: '25vw',
+        color: '#eeefff',
+        fontFamily: 'Inter, sans-serif',
+        fontSize: '.9rem'
+      }}>
+        Your friend challenged you to play but you dont know how? 
+        Or you just allways wanted to learn basics but never found time to do it? Now you have a chance!
+        Dive in to our 'First steps at chess' and start playing chess!
+      </Typography>
+      <div style={{display: 'flex', justifyContent: 'left', alignItems: 'center', gap:'.5vw', marginTop: '5vh'}}>
       <Button variant="outlined" sx={{ 
-        color: 'white', width: '10vw', 
+         color: 'white', width: '9.8vw', 
         borderRadius: '25px', 
         border: '2px solid #CF9FFF',
-        transition: '.5s',
+        transition: '.6s',
+        fontWeight: '700',
+        fontFamily: 'Inter, sans-serif',
+        filter: 'drop-shadow(0px 0px 25px #CF9FFF)',
         '&:hover': {
             backgroundColor: '#CF9FFF',
             border: '2px solid #CF9FFF',
-            color: 'black'
+            color: 'black',
+            filter: 'drop-shadow(0px 0px 25px #CF9FFF)'
 
 
         }
         }} >Start Course!</Button>
+        <Typography sx={{
+            color: "#eeefff",
+            textAlign: 'center',
+            width: '30px',
+            height: '28px'
+            }}>
+                <LockOpenIcon sx={{color: 'green'}}/>
+        </Typography>
+        </div>
       </div>
       <div
         style={{
@@ -72,13 +97,15 @@ const Intro = () => {
           height: 'auto',
         }}
       >
-        <Chessboard
+        <Box sx={{filter: 'drop-shadow(0px 0px 15px #CF9FFF)', transition: '1s', '&:hover':{filter: 'drop-shadow(0px 0px 30px #CF9FFF)',}}}><Chessboard
           id="BasicBoard"
           arePiecesDraggable={false}
           customDarkSquareStyle={{ backgroundColor: '#CF9FFF' }}
           customLightSquareStyle={{ backgroundColor: '#896da5' }}
           position={randomPosition}
+          areArrowsAllowed={false}
         />
+        </Box>
       </div>
     </div>
   );
