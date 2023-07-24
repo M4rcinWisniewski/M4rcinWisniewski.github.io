@@ -1,10 +1,31 @@
 // import { Padding } from '@mui/icons-material';
-import image from '../static/purple.png'
+// import image from '../static/purple.png'
 import '../style/style.css'
 import Button from '@mui/material/Button';
 import { Link } from "wouter";
+import { Box } from '@mui/material';
+import { Chessboard } from 'react-chessboard';
+import { useState, useEffect } from 'react';
+import { elements } from '../data/FENdata';
 
 const Logo = () => {
+    const [randomPosition, setRandomPosition] = useState('');
+
+  useEffect(() => {
+
+    const pickRandomPosition = () => {
+      const randomIndex = Math.floor(Math.random() * elements.length);
+      const selectedPosition = elements[randomIndex];
+      setRandomPosition(selectedPosition);
+    };
+
+    pickRandomPosition();
+
+    const intervalId = setInterval(pickRandomPosition, 3000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
     
     const Stylesh1 = {
         fontSize: '3.5rem',
@@ -50,6 +71,7 @@ const Logo = () => {
             justifyContent: 'center',
             alignItems: 'center',
             
+            
         }}>
         <section style={{
             width: '60vw',
@@ -57,9 +79,9 @@ const Logo = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: '3.5vh',
+            marginTop: '5vh',
             gap: '10vw',
-            // flexWrap: 'wrap-reverse'
+            flexWrap: 'wrap-reverse'
 
         }}><div>
         <h1 style={Stylesh1}>ChessRocket</h1>
@@ -73,11 +95,20 @@ const Logo = () => {
                 <Link href='/Courses' style={{textDecoration: 'none', color: '#181818'}}><Button variant="outlined" style={styles4}>Courses</Button></Link>
             </div>
             </div>
-            <img src={image} alt="" id="imageId"style={{
+            {/* <img src={image} alt="" id="imageId"style={{
                 // width: '30%',
                 height: '100%',
                 minWidth: '10%',
-            }} />
+            }} /> */}
+                    <Box sx={{marginTop:'5vh',width: '13vw', minWidth: '150px',filter: 'drop-shadow(0px 0px 15px #CF9FFF)', transition: '1s', '&:hover':{filter: 'drop-shadow(0px 0px 17px #CF9FFF)',}}}><Chessboard
+          id="BasicBoard"
+          arePiecesDraggable={false}
+          customDarkSquareStyle={{ backgroundColor: '#CF9FFF' }}
+          customLightSquareStyle={{ backgroundColor: '#896da5' }}
+          position={randomPosition}
+          areArrowsAllowed={false}
+        />
+        </Box>
         </section>
         </div>
     )

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Chessboard } from 'react-chessboard';
-import { elements } from '../FENdata';
+import { elements } from '../../data/FENdata';
 import { Button, Typography, Box } from '@mui/material';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 
@@ -37,6 +37,7 @@ const Intro = () => {
         marginTop: '6vh',
         height: '90vh',
         gap: '15vw',
+       
       }}
     >
       <div><h1
@@ -75,7 +76,7 @@ const Intro = () => {
             backgroundColor: '#CF9FFF',
             border: '2px solid #CF9FFF',
             color: 'black',
-            filter: 'drop-shadow(0px 0px 25px #CF9FFF)'
+            filter: 'drop-shadow(0px 0px 5px #CF9FFF)'
 
 
         }
@@ -97,7 +98,7 @@ const Intro = () => {
           height: 'auto',
         }}
       >
-        <Box sx={{filter: 'drop-shadow(0px 0px 15px #CF9FFF)', transition: '1s', '&:hover':{filter: 'drop-shadow(0px 0px 30px #CF9FFF)',}}}><Chessboard
+        <Box sx={{filter: 'drop-shadow(0px 0px 15px #CF9FFF)', transition: '1s', '&:hover':{filter: 'drop-shadow(0px 0px 30px #CF9FFF)'}}}><Chessboard
           id="BasicBoard"
           arePiecesDraggable={false}
           customDarkSquareStyle={{ backgroundColor: '#CF9FFF' }}

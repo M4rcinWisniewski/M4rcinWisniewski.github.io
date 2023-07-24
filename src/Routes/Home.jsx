@@ -45,7 +45,7 @@ function Home() {
         <h2 style={{color: '#eeeeee', opacity: '100%', fontSize: '2rem', textShadow: '2px 2px 3px #755991', marginTop: '4vh'}}>
           Most popular courses
         </h2>
-        <div ref={emblaRef} style={{overflow: 'hidden', display: 'flex', justifyContent: 'center',  }}>
+        <div ref={emblaRef} style={{overflow: 'hidden', display: 'flex', justifyContent: 'center',}}>
           <Stack direction="row"  FlexWrap="wrap"  style={{ width: '60vw', margin: 0, display: 'flex', justifyContent: 'left',  flex: '0 0 50%'}} >
           
             {cards}
