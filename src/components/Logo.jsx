@@ -6,7 +6,7 @@ import { Link } from "wouter";
 import { Box } from '@mui/material';
 import { Chessboard } from 'react-chessboard';
 import { useState, useEffect } from 'react';
-import { elements } from '../data/FENdata';
+import { chessPositions } from '../data/FENdata';
 
 const Logo = () => {
     const [randomPosition, setRandomPosition] = useState('');
@@ -14,8 +14,8 @@ const Logo = () => {
   useEffect(() => {
 
     const pickRandomPosition = () => {
-      const randomIndex = Math.floor(Math.random() * elements.length);
-      const selectedPosition = elements[randomIndex];
+      const randomIndex = Math.floor(Math.random() * chessPositions.length);
+      const selectedPosition = chessPositions[randomIndex];
       setRandomPosition(selectedPosition);
     };
 
@@ -69,9 +69,7 @@ const Logo = () => {
         <div style={{
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center',
-            
-            
+            alignItems: 'center',   
         }}>
         <section style={{
             width: '60vw',
@@ -84,7 +82,7 @@ const Logo = () => {
             flexWrap: 'wrap-reverse'
 
         }}><div>
-        <h1 style={Stylesh1}>ChessRocket</h1>
+        <h1 style={Stylesh1}>Chess Rocket</h1>
             <h3 style={Stylesh2} className='h3-font'>Everything you need about chess...</h3>
             <div style={{
                 display: 'flex',

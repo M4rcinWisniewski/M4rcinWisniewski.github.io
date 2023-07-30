@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Chessboard } from 'react-chessboard';
-import { elements } from '../../data/FENdata';
+import { chessPositions } from '../../data/FENdata';
 import { Button, Typography, Box } from '@mui/material';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 
@@ -12,8 +12,8 @@ const Intro = () => {
   useEffect(() => {
     // Function to pick a random FEN position
     const pickRandomPosition = () => {
-      const randomIndex = Math.floor(Math.random() * elements.length);
-      const selectedPosition = elements[randomIndex];
+      const randomIndex = Math.floor(Math.random() * chessPositions.length);
+      const selectedPosition = chessPositions[randomIndex];
       setRandomPosition(selectedPosition);
     };
 
@@ -21,7 +21,7 @@ const Intro = () => {
     pickRandomPosition();
 
     // Execute the function every 5 seconds
-    const intervalId = setInterval(pickRandomPosition, 1500);
+    const intervalId = setInterval(pickRandomPosition, 3000);
 
     // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
@@ -61,7 +61,7 @@ const Intro = () => {
       }}>
         Your friend challenged you to play but you dont know how? 
         Or you just allways wanted to learn basics but never found time to do it? Now you have a chance!
-        Dive in to our 'First steps at chess' and start playing chess!
+        Dive in to our "First steps at chess" and start playing chess!
       </Typography>
       <div style={{display: 'flex', justifyContent: 'left', alignItems: 'center', gap:'.5vw', marginTop: '5vh'}}>
       <Button variant="outlined" sx={{ 

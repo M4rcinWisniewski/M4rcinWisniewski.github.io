@@ -1,6 +1,6 @@
 import ResponsiveAppBar from '../components/NavBard'
 import ActionAreaCard from '../components/main'
-import data from '../data/data'
+import data from '../data/cardData'
 import Stack from '@mui/material/Stack';
 import Logo from '../components/Logo';
 import React from 'react'
@@ -25,6 +25,7 @@ function Home() {
         image={item.image}
         level={item.level}
         price={item.price}
+        path={item.path}
 
       />
     )

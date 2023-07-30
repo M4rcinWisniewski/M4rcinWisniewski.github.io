@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import {Link} from 'wouter';
 import { linkStyle } from './NavBard'; // style for link imported from NavBar component
 import '../style/style.css';
+import PersonIcon from '@mui/icons-material/Person';
 
 const Form = () => {
   const [loginValue, setLoginValue] = useState('');
@@ -53,8 +54,8 @@ const Form = () => {
       }}
       onSubmit={onSubmit}
     >
-      <h1 className="h1--logIn" style={{ textAlign: 'center' }}>
-        Log in to your account
+      <h1 className="h1--logIn" style={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '.5vw'}}>
+       <PersonIcon sx={{fontSize: '2.2rem', marginTop: '5px'}}/> Log in
       </h1>
       <TextField
         fullWidth

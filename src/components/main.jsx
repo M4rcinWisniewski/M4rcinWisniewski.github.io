@@ -6,11 +6,12 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import '../style/style.css'
+import {Link} from 'wouter';
 
 
 export default function ActionAreaCard(props) {
   return (
-    <Card className='card' sx={{
+    <Link href={props.path}><Card className='card' sx={{
       transition: '.7s',
       m: 5,
       marginBottom: '0',
@@ -30,11 +31,11 @@ export default function ActionAreaCard(props) {
           <Typography variant="body2" color="text.secondary">
             {props.level}
             {props.price}
-            <br></br>
+            <br/>
             <span style={{color: '#CF9FFF', fontWeight: '600', fontSize: '1rem', display: 'flex'}}>Read more< ArrowForwardIcon sx={{width: '1.2rem'}}/></span>
           </Typography>
         </CardContent>
       </CardActionArea>
-    </Card>
+    </Card></Link>
   );
 }

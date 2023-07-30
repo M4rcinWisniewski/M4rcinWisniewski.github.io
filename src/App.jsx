@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Home from './Routes/Home'
 import {Route} from "wouter";
@@ -8,6 +7,7 @@ import Signup from './Routes/Singup';
 import LearnToPlay from './Routes/LearnToPlay';
 import './style/style.css'
 import Analysis from './Routes/Analysis';
+import Blog from './Routes/Blog';
 
 function App(){
   return(
@@ -18,6 +18,7 @@ function App(){
       <Route path='/Signup' component={Signup} />
       <Route path='/Courses/Learn-To-Play' component={LearnToPlay} />
       <Route path="/Analysis" component={Analysis} />
+      <Route path="/Blog" component={Blog} />
     </>
   )
 }

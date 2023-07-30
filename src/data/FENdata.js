@@ -1,5 +1,5 @@
 // Array with FEN code of opening that apearing on custom board.
-export const elements = [
+export const chessPositions = [
     'rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq c6 0 2',
     'rnbqkbnr/pppp1ppp/4p3/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2',
     'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3' ,
@@ -23,6 +23,38 @@ export const elements = [
     'rnbqkb1r/pppppppp/5n2/6B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2',
     'rnbqkb1r/p2ppppp/5n2/1ppP4/2P5/8/PP2PPPP/RNBQKBNR w KQkq b6 0 4',
     'rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3',
-    'rnbqkb1r/pp3ppp/3p1n2/2pP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 6'
+    'rnbqkb1r/pp3ppp/3p1n2/2pP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 6',
+    '8/1K3P1P/3r4/2P5/1k1rn2n/4p1N1/p4P1B/q4b2 w - - 0 1',
+    '2Nn1R2/5p2/2p1kp2/1r5q/8/4N1BP/2bp1P2/6K1 w - - 0 1',
+    '6bk/1p6/1qPr1b2/3RpP2/4NPn1/8/K7/5QR1 w - - 0 1',
+    '2k2r1q/p1P3Q1/N7/6P1/2pp4/1p1R4/BK5p/4n3 w - - 0 1',
+    '5N2/5P2/1P6/1ppR1KB1/k4n1q/6P1/bb2Pp2/8 w - - 0 1',
+    '8/3P2P1/2pnp1b1/2p1NPR1/3p1b2/8/1K1pk3/2B5 w - - 0 1',
+    '4N3/PRb2nK1/1P1pq3/3P1p2/8/1B1p3Q/3k4/4r3 w - - 0 1',
+    '8/4P3/1p1p2Q1/3kp2P/3p3N/1KP4R/1pP4n/3r4 w - - 0 1',
+    '5BK1/2PP4/8/3P1b2/N7/p1qr1P1n/3Pp2k/4r3 w - - 0 1',
+    '3Q4/3P4/1p6/3np1r1/1P2K1P1/P3P3/1p4R1/r4k1b w - - 0 1',
+    '8/1R4p1/p2prPQb/6p1/7B/3K1p1k/b1p5/2N5 w - - 0 1',
+    'N1b5/5r2/P2B4/3kb3/1q1pN2p/1npP3B/1pn2R1Q/3K4 w - - 0 1',
+    '1B3b2/1p2p1R1/1P2Pp1K/5pPp/4P1rk/3r3p/4P2N/7N w - - 0 1',
+    '1r5R/1P1bPBpP/1p5N/2B1k2N/1p1p3P/6K1/5P2/5q1R w - - 0 1',
+    '2N5/1nk5/P1pRp3/8/2p1p1K1/1nBPrp1P/2P1p1P1/6q1 w - - 0 1',
+    '5N2/RQ6/1P2pbr1/4p1r1/1R2p1Pk/2P1q3/b3Pp2/n4K2 w - - 0 1',
+    '3r4/7K/2Q5/4P3/6k1/8/8/8 w - - 0 1',
+    '8/p7/8/2P5/8/7k/3K2p1/8 w - - 0 1',
+    '8/3k3p/8/7K/8/8/P7/4N3 w - - 0 1',
+    '8/8/8/4k3/8/7K/3p4/8 w - - 0 1',
+    '8/4k3/8/6K1/8/8/3Q4/8 w - - 0 1',
+    '3n3N/4b3/Q7/7P/3k4/8/6pP/4K3 w - - 0 1',
+    '4Rb2/nP1b4/2P1pk2/BN1r1P1p/P7/4KBPr/PPQ5/2n1N3 w - - 0 1',
+    '8/PRnk4/1P4r1/1qnp1K1P/pN2R2p/2PpP1pN/5P1r/2B5 w - - 0 1',
+    '3B2K1/1P2P1P1/3k1PP1/2r2p2/R4Pp1/RN2pqrB/1pn3p1/n7 w - - 0 1',
+    '8/5N2/pR3P2/8/5P1p/2p2k2/Q7/3K4 w - - 0 1',
+    '3r4/6P1/8/4pR2/k3B3/8/6p1/2KN3Q w - - 0 1',
+    '8/8/Kpkp4/p1p5/2P2q2/7P/8/7R w - - 0 1',
+    '2bk4/7P/7r/5p1P/4B2K/8/5p2/3n4 w - - 0 1',
+    'n6Q/1b1B4/6pp/2Np4/p7/5k2/3P3B/6K1 w - - 0 1',
+    '7K/8/3pQ3/1PPp4/7p/3B1P2/1P1k1np1/8 w - - 0 1',
+    '8/8/5P2/3p3p/8/N2bnk2/PKPR4/2N3n1 w - - 0 1'
 
   ];

@@ -20,13 +20,13 @@ const LogInForm = () => {
                 
                 }}>
             <div style={{
-                backgroundColor: '#eeefff',
+                backgroundColor: 'rgba(255, 255, 255, .85)',
                 width: '25vw',
                 height: '56vh',
                 display: 'flex',
                 justifyContent: 'center',
                 padding: '15px',
-                borderRadius: '20px',
+                borderRadius: '10px',
                 minWidth: '300px'
                 
                 
