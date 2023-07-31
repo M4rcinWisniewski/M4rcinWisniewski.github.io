@@ -12,7 +12,10 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useState } from 'react';
-
+import { Button } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import Post from './PostForm'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 
 
@@ -20,19 +23,44 @@ import { useState } from 'react';
 
 const  BlogCard = props => {
     const [isClicked, setIsClicked] = useState(false)
+    const [isToggle, setIsToggle] = useState(false)
     
     const cardStyle ={
-        marginTop: '14vh'
+        marginTop: '14vh',
+        
     }
 
     const handleClick = () => {
         setIsClicked((prevIsClicked) => !prevIsClicked);
-        console.log(!isClicked)
 
+    }
+
+    const toggleForm = () => {
+      setIsToggle((prevIsToggle) => !prevIsToggle)
     }
     
     return (
-        <Card style={cardStyle} sx={{ maxWidth: 345, transition: '.4s ', '&:hover': {bgcolor: '#CF9FFF', cursor: 'pointer'} }} >
+      <main style={{display: 'flex', justifyContent:'center', alignItems:'flex-start',flexDirection: 'column', width:'100vw', zIndex: 0}}>
+      
+      <Button onClick={toggleForm} variant="conteined" style={{
+        backgroundColor: '#CF9FFF'
+      
+    }} sx={{
+        top: '12%', 
+      left: '2%',
+       zIndex:'5', 
+      position: 'fixed',
+       color: '#eeefff', 
+      borderColor:'#CF9FFF', '&:hover': {
+        outline: isToggle ? '2px black solid' : '2px #eeefff solid',
+        borderColor:'#CF9FFF', outlineOffset:'.15rem'}, width: '.5vw'
+        }}>
+        {isToggle ? <ArrowBackIcon sx={{color: '#181818'}} value="add"/>: <AddIcon sx={{color: '#181818'}}/>}
+      </Button>
+      {isToggle && <Post style={{zIndex: 3}} />}
+      <div style={{display:'flex', justifyContent: 'center', width:'100vw'}}>
+        <Card style={cardStyle} sx={{ borderRadius:'0', maxWidth: 345, transition: 'ease', width:'20vw', zIndex: 0,
+         '&:hover': { outline:' 3px #CF9FFF solid', cursor: 'pointer', outlineOffset: '.2rem'} }} >
       <CardHeader sx={{}}
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src={props.image}>
@@ -70,6 +98,8 @@ const  BlogCard = props => {
       </CardActions>
         
     </Card>
+    </div>
+    </main>
     )
 }
 

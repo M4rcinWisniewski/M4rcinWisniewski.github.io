@@ -5,13 +5,23 @@ import {Link} from 'wouter';
 import { linkStyle } from './NavBard'; // style for link imported from NavBar component
 import '../style/style.css';
 import PersonIcon from '@mui/icons-material/Person';
+import IconButton from '@mui/material/IconButton';
+import InputAdornment from '@mui/material/InputAdornment';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const Form = () => {
   const [loginValue, setLoginValue] = useState('');
   const [passwordValue, setPasswordValue] = useState('');
   const [loginError, setLoginError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [visible, setVisible] = useState(false)
 
+  const toggleVisible = () => {
+    setVisible(!visible)
+
+
+  }
   const textFieldStyle = {
     color: 'black',
     borderRadius: '4px',
@@ -54,7 +64,13 @@ const Form = () => {
       }}
       onSubmit={onSubmit}
     >
-      <h1 className="h1--logIn" style={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '.5vw'}}>
+      <h1 className="h1--logIn" style={{ 
+        textAlign: 'center', 
+      display: 'flex', 
+      justifyContent: 'center',
+       alignItems: 'center',
+       gap: '.5vw'
+       }}>
        <PersonIcon sx={{fontSize: '2.2rem', marginTop: '5px'}}/> Log in
       </h1>
       <TextField
@@ -86,11 +102,21 @@ const Form = () => {
         required
         id="password"
         label="Password"
-        type="password"
+        type={visible ? 'text' : 'password'}
         variant="outlined"
         color="secondary"
         style={textFieldStyle}
         InputProps={{
+          endAdornment: (          
+          <InputAdornment position="end" >
+            <IconButton
+              aria-label="toggle password visibility"
+              onClick={toggleVisible}
+              edge="end"
+            >
+            {visible ? <Visibility sx={{width: '25px', color: 'black'}} /> : <VisibilityOff sx={{width: '25px', color: 'black'}} /> }
+          </IconButton>
+      </InputAdornment>),
           inputProps: { style: placeholderStyle },
           sx: {
             '& .MuiInputLabel-root': {
@@ -101,6 +127,8 @@ const Form = () => {
         value={passwordValue}
         onChange={handlePasswordChange}
         error={passwordError}
+
+
       />
       {passwordError && (
         <FormHelperText error={passwordError}>

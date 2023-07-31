@@ -5,7 +5,7 @@ export default function Blog() {
   return (
     <>
         <ResponsiveAppBar />
-        <Box sx={{display: 'flex', justifyContent: 'center', margin: '0 2vw 0 2vw'}}>
+        <Box sx={{display: 'flex', justifyContent: 'center', margin: '2vh 2vw 0 2vw'}}>
             <BlogCard />
         </Box>
     </>
