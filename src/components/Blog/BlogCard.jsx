@@ -3,7 +3,7 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import image from "../../static/dataImages/start.png";
+// import image from "../../static/dataImages/start.png";
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -22,7 +22,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 
 const  BlogCard = props => {
-    const [isClicked, setIsClicked] = useState(false)
+    const [isClicked, setIsClicked] = useState(props.like)
     const [isToggle, setIsToggle] = useState(false)
     
     const cardStyle ={
@@ -55,36 +55,37 @@ const  BlogCard = props => {
         outline: isToggle ? '2px black solid' : '2px #eeefff solid',
         borderColor:'#CF9FFF', outlineOffset:'.15rem'}, width: '.5vw'
         }}>
-        {isToggle ? <ArrowBackIcon sx={{color: '#181818'}} value="add"/>: <AddIcon sx={{color: '#181818'}}/>}
+        {isToggle ?  <ArrowBackIcon sx={{color: '#181818'}} value="add"/> : <AddIcon sx={{color: '#181818'}}/>}
       </Button>
       {isToggle && <Post style={{zIndex: 3}} />}
       <div style={{display:'flex', justifyContent: 'center', width:'100vw'}}>
-        <Card style={cardStyle} sx={{ borderRadius:'0', maxWidth: 345, transition: 'ease', width:'20vw', zIndex: 0,
-         '&:hover': { outline:' 3px #CF9FFF solid', cursor: 'pointer', outlineOffset: '.2rem'} }} >
+        <Card style={cardStyle} sx={{bgcolor:'#fffeee', borderRadius:'0', maxWidth: 345, transition: 'ease', width:'20vw', zIndex: 0,
+         '&:hover': {  cursor: 'pointer', bgcolor: '#eeefff'} }} >
       <CardHeader sx={{}}
+      title={props.name}
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src={props.image}>
-            
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src={props.prof}>
+            {props.name[0]}
           </Avatar>
         }
+        
+        
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
         }
-      />
+      ></CardHeader>
       <CardMedia
         component="img"
         height="194"
-        image={image}
+        image={props.image}
         alt="someones article"
         sx={{display:'flex', justifyContent:'center', alignItems:'center', width: '100%'}}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
+          {props.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
