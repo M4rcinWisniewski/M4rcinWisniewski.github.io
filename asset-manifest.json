@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/chessrocket/static/css/main.e0a18ae3.css",
+    "main.js": "/chessrocket/static/js/main.3d3655ea.js",
+    "static/media/chess-playing-hand.png": "/chessrocket/static/media/chess-playing-hand.b711781bfab1718361d0.png",
+    "static/media/start.png": "/chessrocket/static/media/start.070e122142700835f240.png",
+    "static/media/quennsGambit.png": "/chessrocket/static/media/quennsGambit.baeb4445ece21aa25c11.png",
+    "static/media/vienna.jpg": "/chessrocket/static/media/vienna.8d696a31dbd986717396.jpg",
+    "index.html": "/chessrocket/index.html",
+    "main.e0a18ae3.css.map": "/chessrocket/static/css/main.e0a18ae3.css.map",
+    "main.3d3655ea.js.map": "/chessrocket/static/js/main.3d3655ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0a18ae3.css",
+    "static/js/main.3d3655ea.js"
+  ]
+}
