@@ -11,12 +11,12 @@ import Blog from './Routes/Blog';
 function App(){
   return(
     <>
-      <Route path="/" component={Home} />
-      <Route path="/Courses" component={Courses} />
-      <Route path="/Login" component={LogInForm}/>
-      <Route path='/Courses/Learn-To-Play' component={LearnToPlay} />
-      <Route path="/Analysis" component={Analysis} />
-      <Route path="/Blog" component={Blog} />
+      <Route path="/chess/" component={Home} />
+      <Route path="/chess/Courses" component={Courses} />
+      <Route path="/chess/Login" component={LogInForm}/>
+      <Route path='/chess/Courses/Learn-To-Play' component={LearnToPlay} />
+      <Route path="/chess/Analysis" component={Analysis} />
+      <Route path="/chess/Blog" component={Blog} />
     </>
   )
 }
