@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { TextField, Typography, FormHelperText } from '@mui/material';
 import Button from '@mui/material/Button';
-import {Link} from 'wouter';
-import { linkStyle } from './NavBard'; // style for link imported from NavBar component
 import '../style/style.css';
 import PersonIcon from '@mui/icons-material/Person';
 import IconButton from '@mui/material/IconButton';
@@ -143,7 +141,6 @@ const Form = () => {
         color="secondary"
         sx={{ textTransform: 'lowercase ! important', cursor: 'pointer' }}
       >
-        <Link href="/Signup" style={linkStyle}>* If you don't have an account, sign up!</Link>
       </Typography>
     </form>
   );
